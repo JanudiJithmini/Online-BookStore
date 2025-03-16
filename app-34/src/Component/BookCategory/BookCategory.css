@@ -10,8 +10,8 @@ body {
     color: white;
     position: relative;
     z-index: 1;
-
-  }
+  
+  } 
   
   /* Adding overlay for better contrast */
   .booklist-container::before {
