@@ -1,15 +1,94 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import "./BookCategory.css";
+import BookSection from "./BookSection";
+import book2 from "../../assets/cmjd-pic-2.png";
+import book3 from "../../assets/cmjd-pic-3.png";
+import book4 from "../../assets/1987.png";
+import book5 from "../../assets/99082.jpg";
+import book6 from "../../assets/Fairy-Tale-Series_Little-Red-Riding-Hood-FC-1-1.jpg";
+import book7 from "../../assets/9781484767276-uk.jpg";
+import book8 from "../../assets/The_Great_Gatsby.jpg";
+import book9 from "../../assets/1100590.jpg";
+import book10 from "../../assets/images.png";
+
 function BookCategory() {
+  const [selectedCategory, setSelectedCategory] = useState("fiction");
+
+  // Refs for sections
+  const fictionRef = useRef(null);
+  const childrensStoryRef = useRef(null);
+  const novelsRef = useRef(null);
+
+  const booksData = {
+    fiction: [
+      { image: book4, title: "Nineteen Eighty-Four", discount: 10 },
+      { image: book2, title: "The Kite Runner", discount: 10 },
+      { image: book3, title: "Counting Machine", discount: 10 },
+    ],
+    childrensStory: [
+      {
+        image: book5,
+        title: "The Gingerbread Man",
+        discount: 20,
+      },
+      {
+        image: book6,
+        title: "Little Red Riding Hood",
+        discount: 20,
+      },
+      { image: book7, title: "Rapunzel", discount: 20 },
+    ],
+    novels: [
+      { image: book8, title: "The Great Gatsby", discount: 10 },
+      { image: book9, title: "The Color Purple", discount: 10 },
+      { image: book10, title: "Genocidal", discount: 10 },
+    ],
+  };
+
+  // Function to scroll to the selected section
+  const handleCategoryChange = (event) => {
+    const category = event.target.value;
+    setSelectedCategory(category);
+
+    // Scroll to the selected section
+    if (category === "fiction" && fictionRef.current) {
+      fictionRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (category === "childrens-story" && childrensStoryRef.current) {
+      childrensStoryRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (category === "novels" && novelsRef.current) {
+      novelsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="Category-page">
       <div className="category-dropdown">
         <label>Categories: </label>
-        <select>
+        <select value={selectedCategory} onChange={handleCategoryChange}>
           <option value="fiction">Fiction</option>
           <option value="childrens-story">Children's Story</option>
           <option value="novels">Novels</option>
         </select>
+      </div>
+
+      <div className="book-list-container">
+        {/* Fiction Section */}
+        <div ref={fictionRef}>
+          <BookSection title="Fiction" books={booksData.fiction} />
+        </div>
+
+        {/* Children's Story Section */}
+        <div ref={childrensStoryRef}>
+          <BookSection
+            title="Children's Story"
+            books={booksData.childrensStory}
+          />
+        </div>
+
+        {/* Novels Section */}
+        <div ref={novelsRef}>
+          <BookSection title="Novels" books={booksData.novels} />
+        </div>
       </div>
     </div>
   );
