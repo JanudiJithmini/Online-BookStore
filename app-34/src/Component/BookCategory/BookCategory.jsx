@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./BookCategory.css";
 import BookSection from "./BookSection";
+import book1 from "../../assets/kaliyugaya.jpg";
 import book2 from "../../assets/cmjd-pic-2.png";
 import book3 from "../../assets/cmjd-pic-3.png";
 import book4 from "../../assets/1987.png";
@@ -23,7 +24,7 @@ function BookCategory() {
     fiction: [
       { image: book4, title: "Nineteen Eighty-Four", discount: 10 },
       { image: book2, title: "The Kite Runner", discount: 10 },
-      { image: book3, title: "Counting Machine", discount: 10 },
+      { image: book1, title: "Gamperaliya", discount: 10 },
     ],
     childrensStory: [
       {
