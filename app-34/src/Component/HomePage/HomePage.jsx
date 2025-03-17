@@ -34,7 +34,7 @@ function HomePage() {
       <div className="home-image">
         <img src={Homeimage} alt=""></img>
       </div>
-      <div className="book-list-container">
+      <div className="book-list-container-main">
         <h2 className="topic-heading">Recommended Books</h2>
         <div className="book-list">
           {books.map((book, index) => (

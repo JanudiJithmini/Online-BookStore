@@ -10,16 +10,17 @@
     margin-left: 300px;
   }
   
-  .book-list-container {
+  .book-list-container-main {
     text-align: center;
-    padding: 20px;
+    padding-left: 300px;
+    
   }
   
   .topic-heading {
     font-size: 24px;
     margin-bottom: 15px;
     color: #f7f3f3;
-    padding-left: 300px;
+    
   }
   
   .book-list {

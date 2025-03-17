@@ -99,8 +99,8 @@
 /* Discount Label */
 .book-card .discount {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: -10px;
+  right: -10px;
   background-color: red;
   color: white;
   padding: 3px 3px;
