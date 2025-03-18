@@ -12,7 +12,7 @@ function NavBar() {
       <MenuList linkName="Home" url="/" />
       <MenuList linkName="Category" url="/categories" />
       <MenuList linkName="Contact" url="/contact" />
-      <MenuList linkName="Cart" url="/cart" />
+      {/* <MenuList linkName="Cart" url="/cart" /> */}
       <MenuList linkName="Login" url="/login" />
       <div className="search-bar">
         <input type="text" placeholder="Search for books..." />
