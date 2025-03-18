@@ -22,27 +22,39 @@ function BookCategory() {
 
   const booksData = {
     fiction: [
-      { image: book4, title: "Nineteen Eighty-Four", discount: 10 },
-      { image: book2, title: "The Kite Runner", discount: 10 },
-      { image: book1, title: "Gamperaliya", discount: 10 },
+      {
+        image: book4,
+        title: "Nineteen Eighty-Four",
+        discount: 10,
+        path: "/cart1",
+      },
+      {
+        image: book2,
+        title: "The Kite Runner",
+        discount: 10,
+        path: "/cart2",
+      },
+      { image: book1, title: "Gamperaliya", discount: 10, path: "/cart3" },
     ],
     childrensStory: [
       {
         image: book5,
         title: "The Gingerbread Man",
         discount: 20,
+        path: "/cart4",
       },
       {
         image: book6,
         title: "Little Red Riding Hood",
         discount: 20,
+        path: "/cart5",
       },
-      { image: book7, title: "Rapunzel", discount: 20 },
+      { image: book7, title: "Rapunzel", discount: 20, path: "/cart6" },
     ],
     novels: [
-      { image: book8, title: "The Great Gatsby", discount: 10 },
-      { image: book9, title: "The Color Purple", discount: 10 },
-      { image: book10, title: "Genocidal", discount: 10 },
+      { image: book8, title: "The Great Gatsby", discount: 10, path: "/cart7" },
+      { image: book9, title: "The Color Purple", discount: 10, path: "/cart8" },
+      { image: book10, title: "Genocidal", discount: 10, path: "/cart9" },
     ],
   };
 
