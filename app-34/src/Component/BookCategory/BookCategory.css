@@ -1,107 +1,133 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #aeacac;
-  }
-  .booklist-container {
-    margin-left: 300px;
-    background-position: center;
-    padding: 30px;
-    text-align: center;
-    color: white;
-    position: relative;
-    z-index: 1;
+/* Styles for the main category page */
+.Category-page {
+  padding: 20px;
+  margin-left: 300px; /* Adjust if the sidebar width changes */
+  background-image: url('bg0.jpg');
+  min-height: 100vh;
+  text-align: center;
+}
 
-  }
+/* Dropdown section */
+.category-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.category-dropdown label {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(133, 133, 239);
+  margin-right: 10px; /* Space between label and dropdown */
+}
+
+.category-dropdown select {
+  padding: 8px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.category-dropdown select:hover {
+  border-color: #888;
+}
+
+/* Book Section */
+.book-section {
+  margin-bottom: 30px;
   
-  /* Adding overlay for better contrast */
-  .booklist-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    z-index: -1;
-  }
-    
-    .topic-heading {
-      font-size: 1.8em;
-      margin-left: 20%;
-      color: #060606;
-      font-weight: bold;
-    }
-    
-    .book-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    
-    .book-box {
-      background-color: #190a7d;
-      width: 250px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 10px;
+  margin-left: 10px;
+}
+/* Book List Container */
+.book-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%; /* Adjusts width dynamically */
+  margin-left: 10px;
+  
+  
+}
+
+/* Book Sections */
+.book-section {
+  margin-bottom: 30px;
+  text-align: left;
+  
+}
+
+.book-section h2 {
+  font-size: 22px;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  color: yellow;
+}
+
+/* Book List */
+.book-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center; /* Ensures proper alignment */
+}
+
+/* Book Card */
+.book-card {
+  position: relative;
+  width: 140px;
+  text-align: center;
+  background-color: rgba(20, 20, 50, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Discount Label */
+.book-card .discount {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  padding: 3px 5px;
+  font-size: 25px;
+  border-radius: 50%;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .category-dropdown {
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      
-    }
-    
-    .book-box:hover {
-      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-    }
-    
-    .book-box h3 {
-      margin-top: 0;
-      font-size: 1.2em;
-      color: #f4f1f1;
-    }
-    
-    .book-box p {
-      margin: 5px 0;
-      color: #e8e40a;
-    }
-    .book-caterogory-container{
-      padding-left: 300px;
-      text-align: center; /* Center-align the heading */
-      color: #efe8e8;
-      background-color: #5e5d5f;
-      padding-top: 20px;
-      padding-bottom: 70px;
-    }
-    .book-category-heading{
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      color: #260796;
-      font-weight: bold;
-    }
-    .book-category-list{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+  }
+
+  .category-dropdown label {
+      margin-bottom: 5px;
+  }
+
+  .book-list {
       justify-content: center;
-    }
-    .book-category-box{
-      width: 250px;
-      padding: 20px 10px;
-      background-color: #164860;
-      border: 2px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0px 4px 8px rgba(116, 130, 39, 0.1);
-      transition: box-shadow 0.3s ease;
-      box-shadow: rgba(67, 141, 201, 0.4) 5px 5px, rgba(67, 84, 207, 0.3) 10px 10px, rgba(52, 60, 173, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
-      cursor: pointer;
-    }
-    .book-category-box:hover{
-      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-    }
-    .book-category-box h3{
-      margin-top: 0;
-      font-size: 1.2em;
-      color: #f4f1f1;
-    }
-    
-    
+  }
+
+  .book-card {
+      width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-card {
+      width: 100px;
+  }
+}
