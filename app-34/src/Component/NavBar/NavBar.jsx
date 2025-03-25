@@ -11,9 +11,10 @@ function NavBar() {
       <img src="bookstore-removebg.png" alt="" />
       <MenuList linkName="Home" url="/" />
       <MenuList linkName="Category" url="/categories" />
-      <MenuList linkName="Contact" url="/contact" />
-      {/* <MenuList linkName="Cart" url="/cart" /> */}
+
+      <MenuList linkName="Shopping Cart" url="/shoppingcart" />
       <MenuList linkName="Login" url="/login" />
+      <MenuList linkName="Checkout" url="/checkout" />
       <div className="search-bar">
         <input type="text" placeholder="Search for books..." />
         <button className="search-button">Search</button>

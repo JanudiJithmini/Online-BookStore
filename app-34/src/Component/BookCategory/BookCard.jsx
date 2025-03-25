@@ -1,18 +1,18 @@
 import React from "react";
-import "./BookCategory.css";
 import { Link } from "react-router-dom";
+import "./BookCategory.css";
 
 const BookCard = ({ image, title, discount, path }) => {
   return (
     <Link
       to={{
         pathname: path,
-        state: { image, title, discount },
+        state: { books: [{ image, title, discount }] }, // ✅ Pass book details
       }}
       className="book-card"
     >
       <div className="book-card-content">
-        <img src={image} alt={title} />
+        {image && <img src={image} alt={title} />}
         {discount && <span className="discount">{discount}%</span>}
         <p>{title}</p>
       </div>
