@@ -3,7 +3,6 @@ import "./BookCategory.css";
 import BookSection from "./BookSection";
 import book1 from "../../assets/kaliyugaya.jpg";
 import book2 from "../../assets/cmjd-pic-2.png";
-
 import book4 from "../../assets/1987.png";
 import book5 from "../../assets/99082.jpg";
 import book6 from "../../assets/Fairy-Tale-Series_Little-Red-Riding-Hood-FC-1-1.jpg";
@@ -15,7 +14,6 @@ import book10 from "../../assets/images.png";
 function BookCategory() {
   const [selectedCategory, setSelectedCategory] = useState("fiction");
 
-  // Refs for sections
   const fictionRef = useRef(null);
   const childrensStoryRef = useRef(null);
   const novelsRef = useRef(null);

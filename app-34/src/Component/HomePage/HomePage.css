@@ -25,10 +25,10 @@
   
   .book-list {
     display: flex;
-    justify-content: center;
+    
     flex-wrap: wrap;
-    gap: 20px;
-    padding-left: 300px;
+    gap: 60px;
+    padding-left: 100px;
   }
   
   .book-box {
@@ -49,6 +49,9 @@
   .book-box h3 {
     font-size: 18px;
     margin: 10px 0;
+    background-color: #0d0771;
+    text-align: center;
+    align-items: center;
   }
   
   .book-box p {

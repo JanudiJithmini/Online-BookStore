@@ -7,7 +7,7 @@ const BookCard = ({ image, title, discount, path }) => {
     <Link
       to={{
         pathname: path,
-        state: { books: [{ image, title, discount }] }, // ✅ Pass book details
+        state: { books: [{ image, title, discount }] },
       }}
       className="book-card"
     >
